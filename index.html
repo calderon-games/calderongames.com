@@ -1,1 +1,157 @@
-Welcome to calderongames.com
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Resolve theme before first paint: no flash, defaults to system preference -->
+<script>
+(function () {
+  try {
+    var stored = localStorage.getItem('cg-theme');
+    var theme = (stored === 'light' || stored === 'dark')
+      ? stored
+      : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', theme);
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute('content', theme === 'dark' ? '#0B0A0D' : '#FBF7F0');
+  } catch (e) {}
+})();
+</script>
+
+<title>Calderon Games — Independent Game Studio</title>
+<meta name="description" content="Calderon Games is an independent studio building original video games. Currently in development: Static Tide.">
+<link rel="canonical" href="https://calderongames.com/">
+<meta name="theme-color" content="#FBF7F0">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap">
+
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png">
+<link rel="icon" href="images/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Calderon Games — Independent Game Studio">
+<meta property="og:description" content="Independent studio building original video games. Currently in development: Static Tide.">
+<meta property="og:url" content="https://calderongames.com/">
+<meta property="og:image" content="https://calderongames.com/images/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="#top" class="brand" aria-label="Calderon Games — back to top">
+      <picture>
+        <source srcset="images/logo-header.webp" type="image/webp">
+        <img class="brand-mark" src="images/logo-header.png" width="240" height="249" alt="">
+      </picture>
+      <span class="brand-name">Calderon Games</span>
+    </a>
+
+    <nav class="site-nav" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#project">Games</a>
+      <a href="#connect">Connect</a>
+    </nav>
+
+    <div class="header-actions">
+      <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Switch to light mode">
+        <svg class="icon-sun" viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4.2"/>
+          <path d="M12 2.5v2.4M12 19.1v2.4M4.2 4.2l1.7 1.7M18.1 18.1l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.2 19.8l1.7-1.7M18.1 5.9l1.7-1.7"/>
+        </svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" width="19" height="19" fill="currentColor" aria-hidden="true">
+          <path d="M20.4 14.7A8.6 8.6 0 1 1 9.3 3.6a7 7 0 0 0 11.1 11.1z"/>
+        </svg>
+      </button>
+      <button type="button" id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile">
+    <a href="#about">About</a>
+    <a href="#project">Games</a>
+    <a href="#connect">Connect</a>
+  </nav>
+</header>
+
+<main id="main">
+  <section id="top" class="hero">
+    <div class="hero-embers" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span><span></span>
+    </div>
+    <div class="wrap hero-inner">
+      <picture>
+        <source srcset="images/logo.webp" type="image/webp">
+        <img class="hero-logo" src="images/logo.png" width="900" height="935"
+             alt="Calderon Games — a cauldron bubbling with dice, a controller, and a gear over an open flame">
+      </picture>
+      <p class="eyebrow">Independent game studio</p>
+      <h1>We build games worth playing.</h1>
+      <p class="hero-sub">Calderon Games is an independent studio building original video games, from first spark to final release.</p>
+      <div class="hero-actions">
+        <a href="#project" class="btn btn-primary">Explore Static Tide</a>
+        <a href="https://github.com/calderon-games" class="btn btn-outline" target="_blank" rel="noopener">GitHub ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="wrap section-grid">
+      <p class="eyebrow">About</p>
+      <div class="section-content">
+        <h2>About the studio</h2>
+        <p>Calderon Games is an independent studio focused on building games worth playing. We care about craft over trends — every project starts with an idea worth chasing, and the patience to see it through.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="project" class="section section-alt">
+    <div class="wrap">
+      <p class="eyebrow">Current project</p>
+      <div class="project-card">
+        <span class="badge"><span class="badge-dot" aria-hidden="true"></span>In development</span>
+        <h2>Static Tide</h2>
+        <p>Our current project is taking shape. Screenshots, details, and a release window are on the way — follow along as it comes together.</p>
+        <a href="https://github.com/calderon-games" class="link-arrow" target="_blank" rel="noopener">Follow progress on GitHub →</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="connect" class="section">
+    <div class="wrap section-grid">
+      <p class="eyebrow">Connect</p>
+      <div class="section-content">
+        <h2>Let's stay in touch</h2>
+        <p>Follow along as Static Tide comes together, or say hello on GitHub.</p>
+        <a class="link-arrow" href="https://github.com/calderon-games" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+          github.com/calderon-games
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <p>© <span id="year"></span> Calderon Games. All rights reserved.</p>
+    <a class="footer-gh" href="https://github.com/calderon-games" target="_blank" rel="noopener" aria-label="Calderon Games on GitHub">
+      <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+    </a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
